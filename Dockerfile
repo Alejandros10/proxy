@@ -10,7 +10,7 @@ COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Copiar el script de renovación y agregarlo al cron
-COPY renew_certs.sh /etc/cron.daily/renew_certs.sh
+COPY ./scripts/renew_certs.sh /etc/cron.daily/renew_certs.sh
 RUN chmod +x /etc/cron.daily/renew_certs.sh
 
 # Exponer los puertos 80 y 443 para HTTP y HTTPS
